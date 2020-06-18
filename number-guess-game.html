@@ -5,26 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number guessing game</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/number-guess-game.css">
     <script src="js/number-guess.js" async></script>
 </head>
 
 <body>
+    <header>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="number-guess-game.html">Number Guessing Game</a></li>
+            <!-- <li><a href="apply-javascript.html"></a></li> -->
+        </ul>
+    </header>
     <section>
+        <img src="assets/photo-ocean2.jpg">
+    </section>
+    <section class="content">
         <h1>Number guessing game</h1>
         <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell
             you if your guess was too high or too low.</p>
         <label for="number">Enter a guess:</label>
         <input type="text" name="number" id="number">
-        <button id="btn">Submit guess</button>
+        <button class="btn">Submit guess</button>
 
-        <p class="guesses"></p>
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
+        <div class="msg-block">
+            <p class="reset guesses"></p>
+            <p class="reset lastResult"></p>
+            <p class="reset lowOrHi"></p>
+        </div>
     </section>
-    <section>
-        <img src="assets/photo-ocean2.jpg">
-    </section>
+    <footer>@2020 created by Liz</footer>
 </body>
 
 </html>
