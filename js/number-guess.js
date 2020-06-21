@@ -10,6 +10,7 @@ const msgblock = document.querySelector('.msg-block');
 
 let guessCount = 1;
 let resetBtn;
+let isGameOver = false;
 
 function checkGuess() {
     const userGuess = parseInt(input.value, 10);
@@ -26,6 +27,7 @@ function checkGuess() {
     guesses.textContent += userGuess + ' ';
 
     if (userGuess === randomNumber) {
+        isGameOver = true;
         lastResult.textContent = 'Congratulations! You got it right';
         lastResult.style.backgroundColor = 'green';
         lowOrHi.textContent = '';
@@ -44,7 +46,7 @@ function checkGuess() {
     }
 
     guessCount++;
-    input.val = '';
+    input.value = '';
     input.focus();
 }
 
@@ -79,4 +81,15 @@ function resetGame() {
     input.value = '';
     input.focus();
     randomNumber = Math.floor(Math.random * 100) + 1;
+}
+
+input.addEventListener('keydown', inputEnterKeyword);
+
+function inputEnterKeyword(e) {
+    if (!e) {
+        var e = window.event;
+    }
+    if(e.keyCode === 13 && !isGameOver) {
+        checkGuess();
+    }
 }
