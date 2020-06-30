@@ -6,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number guessing game</title>
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/number-guess-game.css">
-    <script src="js/number-guess.js" async></script>
+
+    <script src="js/jquery-3.5.1.min.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/number-guess.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="number-guess-game.html">Number Guessing Game</a></li>
-            <!-- <li><a href="apply-javascript.html"></a></li> -->
-        </ul>
-    </header>
+    <div id="header"></div>
     <section>
         <img src="assets/photo-ocean2.jpg">
     </section>
@@ -36,7 +35,7 @@
             <p class="reset lowOrHi"></p>
         </div>
     </section>
-    <footer>@2020 created by Liz</footer>
+    <div id="footer"></div>
 </body>
 
 </html>
